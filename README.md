@@ -7,7 +7,6 @@
 <li><a href="#orgheadline3">3. Never Before Have So Few Programmers Written So Little Code for So Many Platforms</a></li>
 <li><a href="#orgheadline4">4. Contributions</a></li>
 <li><a href="#orgheadline5">5. License</a></li>
-<li><a href="#orgheadline6">6. List of Paladins</a></li>
 </ul>
 </div>
 </div>
@@ -26,6 +25,16 @@ tell you what properties the component should take, which lets you know how to
 use the component.
 
 These recipes (so far) assume that you are using [re-natal](https://github.com/drapanjanas/re-natal).
+
+## General Resources
+
+- [cljsrn](http://cljsrn.org/)
+- [slack](https://clojurians.slack.com/messages/cljsrn/)
+- [facebook](https://facebook.github.io/react-native/)
+- [re-natal](https://github.com/drapanjanas/re-natal)
+- [re-natal-tutorial](https://github.com/rockiger/re-natal-tutorial)
+
+
 ## Purpose<a id="orgheadline2"></a>
 
 [Programming to Be Officially Renamed Googling Stackoverflow](http://www.theallium.com/engineering/computer-programming-to-be-officially-renamed-googling-stackoverflow/) 
@@ -76,30 +85,14 @@ adapted, is more than welcome. If you feel able, a mini-tutorial for
 installation, for semantics, or both, would be great. If you're able to respond
 to tickets for that component, please let me know.
 
-Components without an example yet:
+Components and patterns without an example yet:
 
-- Audio
-
+- Audio-player
+- Navigation (coming soon)
+- Scrolling
 
 This project aspires to follow [this advice](https://medium.com/code-zen/how-to-maintain-a-successful-open-source-project-aaa2a5437d3a#.z28fzb861).
 
 ## License<a id="orgheadline5"></a>
 
 [WTFPL](http://www.wtfpl.net)
-
-## General Resources
-
--- [cljsrn](http://cljsrn.org/)
--- [slack](https://clojurians.slack.com/messages/cljsrn/)
--- [facebook](https://facebook.github.io/react-native/)
--- [re-natal](https://github.com/drapanjanas/re-natal)
--- [re-natal-tutorial](https://github.com/rockiger/re-natal-tutorial)
-
--   Brief Explanation of re-frame
-
-The re-frame wiki is long and epic. It's well worth reading multiple times.
-
-re-frame itself is well worth mastering because it has close analogues in other
-languages, including JS and Elm. Once you have learned this model of managing
-application state, you're well prepared to pick up other cutting-edge
-frameworks!
