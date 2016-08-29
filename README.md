@@ -26,6 +26,10 @@ use the component.
 
 These recipes (so far) assume that you are using [re-natal](https://github.com/drapanjanas/re-natal).
 
+## Components
+- [ListView](https://github.com/coyotespike/cljsrn-cookbook/tree/master/listview)
+- [react-native-swiper](https://github.com/coyotespike/cljsrn-cookbook/tree/master/swiper)
+
 ## General Resources
 
 - [cljsrn](http://cljsrn.org/)
