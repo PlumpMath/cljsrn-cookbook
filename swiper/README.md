@@ -24,7 +24,7 @@ Get it ready for use by adapting the Swiper into a ClojureScript Reagent class:
 `(def swiper (r/adapt-react-class Swiper))`
 
 You are now able to use your swiper in a scene.
-```
+```clojure
 (defn swiper-view []
   [swiper {:style {} :shows-buttons true}
    [view {:style {:flex 1 :justify-content "center" :align-items "center" :background-color "skyblue"}}

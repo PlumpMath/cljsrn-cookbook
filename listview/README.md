@@ -16,7 +16,7 @@ Getting the component into our app is simple, as it's a core part of ReactNative
 `(def data-source (r/adapt-react-class (.-DataSource (.-ListView ReactNative))))`
 
 Our ListView will look something lke this.
-```
+```clojure
 [list-view {:dataSource (.cloneWithRows ds rows)
             :render-row (fn[row] (r/create-element row-comp #js{:row row}))
             :render-section-header (fn [] (r/as-element [text {:style {:font-size 14 :text-align "center" :background-color "#4A4A4A"}} "Our Amazing ListView"]))}]])
@@ -29,14 +29,14 @@ Let's make some rows that we can use for our data.
 
 We will pass an array of maps to our `DataSource`.
 
-```
+```clojure
 (def rows (clj->js [{:picture logo-img
                      :text "OMG guys it's a ListView, how awesome!"}]))
 ```
 Notice that we turn it into JS.
 
 To make an arbitrary number of rows for demonstration purposes, we can tweak this:
-```
+```clojure
 (def rows (clj->js
            (take 100 (repeat
                       {:picture logo-img
@@ -53,7 +53,7 @@ This DataSource looks like this:
 `(def ds (js/React.ListView.DataSource. (clj->js {:rowHasChanged row-has-changed})))`
 
 Notice it takes a `row-has-changed` function, which might look like this:  
-```
+```clojure
 (defn row-has-changed [x y]
   (let [row-1 (js->clj x :keywordize-keys true) row-2 (js->clj y :keywordize-keys true)]
        (not= row-1 row-2)))
@@ -69,7 +69,7 @@ The next line says:
 `:render-row (fn[row] (r/create-element row-comp #js{:row row}))`  
 
 `row-comp` is a helper function, wrapping each row in our `list-item-view`:
-```
+```clojure
 (def row-comp (r/reactify-component
                (fn[props]
                  (let [row (props :row)]
@@ -79,7 +79,7 @@ The next line says:
 ### List Item View
 Our view can now be a normal, boring View component:
 
-```
+```clojure
 (defn list-item-view [row]
   ;;;; In our let statement, we convert our row back to ClojureScript.
   (let [row (js->clj row :keywordize-keys true)
@@ -99,7 +99,7 @@ Our view can now be a normal, boring View component:
 
 ### Usage
 For demonstration purposes, we can just replace our `app-root` body.
-```
+```clojure
 (defn app-root []
   [demo-list-view])
 ```
